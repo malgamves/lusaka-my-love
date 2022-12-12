@@ -28,7 +28,7 @@
 
         <section class="white">
             <div class="row">
-                <img src="http://c1.staticflickr.com/9/8450/8026519634_f33f3724ea_b.jpg" alt="">
+                <img src="https://i.imgur.com/Ap1F2x5.jpg" alt="">
                 <div>
                     <p> wild heards beat for the plains that nurtered them, til the thing that kept them alive stops
                         their breathings.</p>
@@ -60,14 +60,14 @@
                     <br>
 
                 </div>
-                <img src="http://c1.staticflickr.com/9/8450/8026519634_f33f3724ea_b.jpg" alt="">
+                <img src="https://i.imgur.com/5FZ1OrP.jpg" alt="">
             </div>
 
         </section>
 
         <section class="white">
             <div class="row">
-                <img src="http://c1.staticflickr.com/9/8450/8026519634_f33f3724ea_b.jpg" alt="">
+                <img src="https://i.imgur.com/tu4oI6c.jpg" alt="">
                 <div>
 
                     <p> kids to get class they just don't know what to call it, they never teach that in school, nuance
@@ -99,14 +99,14 @@
                     <p> hard to think about love when it comes and goes</p>
                     <br>
                 </div>
-                <img src="http://c1.staticflickr.com/9/8450/8026519634_f33f3724ea_b.jpg" alt="">
+                <img src="https://i.imgur.com/tJ6ZySS.jpg" alt="">
             </div>
 
         </section>
 
         <section class="white">
             <div class="row">
-                <img src="http://c1.staticflickr.com/9/8450/8026519634_f33f3724ea_b.jpg" alt="">
+                <img src="https://i.imgur.com/23XSuJ3.jpg" alt="">
                 <div>
                     <p>we chose the life we think we deserve so i lived life and you made me feel alive</p>
                     <br>
@@ -127,7 +127,7 @@
                     <p> and how you've made me who i am, a little structured, a little choatic, sometimes warm,
                         unconventially beautiful, full of life, and only getting started </p>
                 </div>
-                <img src="http://c1.staticflickr.com/9/8450/8026519634_f33f3724ea_b.jpg" alt="">
+                <img src="https://i.imgur.com/prcJYZk.jpg" alt="">
             </div>
 
         </section>
@@ -164,6 +164,7 @@ export default defineComponent({
     mounted() {
         this.audio = new Audio(
             'https://cdn.pixabay.com/download/audio/2022/06/13/audio_54f6c2ba71.mp3?filename=dark-sad-ambient-piano-113208.mp3'
+            // 'https://www.dropbox.com/s/zt44wy6nryj0g6e/hearty%20sound-danny-docu.wav'
         );
     },
     methods: {
