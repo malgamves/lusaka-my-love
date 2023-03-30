@@ -21,8 +21,8 @@
                 <p> know but am defined by </p>ß
 
             </div>
-                <button v-if="!isAutoplay" @click="setAutoplay"> hi </button>
-                <button v-else @click="stopAutoplay">bye</button>
+            <button v-if="!isAutoplay" @click="setAutoplay"> hi </button>
+            <button v-else @click="stopAutoplay">bye</button>
 
         </section>
 
@@ -182,9 +182,9 @@ export default defineComponent({
     data() {
         return {
             audio: new Audio(
-            'https://cdn.pixabay.com/download/audio/2022/06/13/audio_54f6c2ba71.mp3?filename=dark-sad-ambient-piano-113208.mp3'
-            // 'https://www.dropbox.com/s/zt44wy6nryj0g6e/hearty%20sound-danny-docu.wav'
-        ),
+                'https://cdn.pixabay.com/download/audio/2022/06/13/audio_54f6c2ba71.mp3?filename=dark-sad-ambient-piano-113208.mp3'
+                // 'https://www.dropbox.com/s/zt44wy6nryj0g6e/hearty%20sound-danny-docu.wav'
+            ),
             timer: 0,
             isAutoplay: false,
         };
@@ -337,43 +337,50 @@ p {
     background-color: #1c87c9;
     color: #fff;
     padding: 5px;
-  }
-  p {
+}
+
+p {
     -moz-animation: marquee 10s linear infinite;
     -webkit-animation: marquee 10s linear infinite;
     animation: marquee 10s linear infinite;
-  }
-  @-moz-keyframes marquee {
-    0% {
-      transform: translateX(100%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-  @-webkit-keyframes marquee {
-    0% {
-      transform: translateX(100%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-  @keyframes marquee {
-    0% {
-      -moz-transform: translateX(100%);
-      -webkit-transform: translateX(100%);
-      transform: translateX(100%)
-    }
-    100% {
-      -moz-transform: translateX(-100%);
-      -webkit-transform: translateX(-100%);
-      transform: translateX(-100%);
-    }
-  }
-.zed {
- z-index: 1;
-  justify-content: center;
 }
-</style> 
+
+@-moz-keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@-webkit-keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes marquee {
+    0% {
+        -moz-transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%)
+    }
+
+    100% {
+        -moz-transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+}
+
+.zed {
+    z-index: 1;
+    justify-content: center;
+}</style> 
 
