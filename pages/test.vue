@@ -1,5 +1,5 @@
 <template>
-    <main @scroll="playSound">
+    <main @scroll="setAutoplay">
 
         <section class="white">
             <div class="row-left">
@@ -18,13 +18,37 @@
                 <br>
                 <p> the place i never got to </p>
                 <br>
-                <p> know but am defined by </p>
+                <p> know but am defined by </p>ß
 
             </div>
                 <button v-if="!isAutoplay" @click="setAutoplay"> hi </button>
                 <button v-else @click="stopAutoplay">bye</button>
 
         </section>
+
+        <!-- <section class="blue">
+            <div ><img class="zed" width="500" height="500" src="https://svgshare.com/i/owt.svg" />
+                <div class="marquee">
+                    <p>This is a horizontally scrolling text without a marquee tag.</p>
+                    <p>This is a horizontally scrolling text without a marquee tag.</p>
+                    <p>This is a horizontally scrolling text without a marquee tag.</p>
+                    <p>This is a horizontally scrolling text without a marquee tag.</p>
+                    <p>This is a horizontally scrolling text without a marquee tag.</p>
+                    <p>This is a horizontally scrolling text without a marquee tag.</p>
+                    <p>This is a horizontally scrolling text without a marquee tag.</p>
+                    <p>This is a horizontally scrolling text without a marquee tag.</p>
+                    <p>This is a horizontally scrolling text without a marquee tag.</p>
+                    <p>This is a horizontally scrolling text without a marquee tag.</p>
+                    <p>This is a horizontally scrolling text without a marquee tag.</p>
+                    <p>This is a horizontally scrolling text without a marquee tag.</p>
+                    <p>This is a horizontally scrolling text without a marquee tag.</p>
+                    <p>This is a horizontally scrolling text without a marquee tag.</p>
+                  </div>
+
+            </div>
+            
+
+        </section> -->
 
         <section class="white">
             <div class="row">
@@ -106,7 +130,7 @@
 
         <section class="white">
             <div class="row">
-                <img src="https://i.imgur.com/23XSuJ3.jpg" alt="">
+                <img src="https://i.imgur.com/Ap1F2x5.jpg" alt="">
                 <div>
                     <p>we chose the life we think we deserve so i lived life and you made me feel alive</p>
                     <br>
@@ -138,6 +162,7 @@
                 <p> made to make me feel something </p>
                 <br>
                 <p> or nothing | by <a href="https://malgamves.dev"> daniel </a></p>
+                <!-- this is for marquee https://www.w3docs.com/tools/code-editor/2113 -->
 
             </div>
 
@@ -156,7 +181,10 @@ import { defineComponent } from 'vue';
 export default defineComponent({
     data() {
         return {
-            audio: HTMLAudioElement | null,
+            audio: new Audio(
+            'https://cdn.pixabay.com/download/audio/2022/06/13/audio_54f6c2ba71.mp3?filename=dark-sad-ambient-piano-113208.mp3'
+            // 'https://www.dropbox.com/s/zt44wy6nryj0g6e/hearty%20sound-danny-docu.wav'
+        ),
             timer: 0,
             isAutoplay: false,
         };
@@ -173,7 +201,7 @@ export default defineComponent({
             await this.audio.play(); // play() once now, you can directly call play() later.
             this.audio.pause();
             this.isAutoplay = true;
-            this.timer = setInterval(() => {
+            setInterval(() => {
                 this.audio?.play();
             }, 3000);
         },
@@ -202,7 +230,7 @@ const playSound = ({ target: { scrollTop, clientHeight, scrollHeight } }) => {
 
 </script> -->
 
-<style>
+<style scoped>
 /** Full Page Scroll-Snapping HTML Sections */
 main {
     height: 100vh;
@@ -216,8 +244,8 @@ section {
 }
 
 /** section colors */
-.red {
-    background: #f44336;
+.blue {
+    background: #1c87c9;
 }
 
 .white {
@@ -303,6 +331,49 @@ p {
 
 .figure {
     overflow: hidden;
+}
+
+.marquee {
+    background-color: #1c87c9;
+    color: #fff;
+    padding: 5px;
+  }
+  p {
+    -moz-animation: marquee 10s linear infinite;
+    -webkit-animation: marquee 10s linear infinite;
+    animation: marquee 10s linear infinite;
+  }
+  @-moz-keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  @-webkit-keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  @keyframes marquee {
+    0% {
+      -moz-transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%)
+    }
+    100% {
+      -moz-transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+  }
+.zed {
+ z-index: 1;
+  justify-content: center;
 }
 </style> 
 
